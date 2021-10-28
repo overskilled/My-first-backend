@@ -1,2 +1,4 @@
-# my-first-backend
+HTTP
+
+GET POST UPDATE (PATCH) DELETE
 

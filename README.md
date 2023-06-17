@@ -1,4 +1,4 @@
-#Description
+# Description
 
 Create a backend app with light web framework (javascript you will use express, ruby you will use sinatra, python you will use flask)
 
@@ -6,7 +6,7 @@ You don't need to create a database, just store the information hard coded insid
 
 In order to find all the information needed, you will have to search online. Wikipedia, Google and Fan's website will have all the information you need for this project! :)
 
-##Part I
+## Part I
 
 It will have a route GET on /. This action will give randomly (in a pool of at least 20) a name of a song from Frank Sinatra.
 Wikipedia Page
@@ -33,7 +33,7 @@ My Way
 $>
 `
 
-##Part II
+## Part II
 
 Continue to build your backend app.js.
 This time we will add multiple pages or routes:
@@ -73,7 +73,7 @@ $>curl http://web-XXXXXXXXX.docode.YYYY.qwasar.io
 My Way
 $>
 
-Part III
+## Part III
 
 Continue to build your backend app.js, in this last part we will add two more routes:
 

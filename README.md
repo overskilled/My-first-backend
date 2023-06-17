@@ -12,8 +12,7 @@ It will have a route GET on /. This action will give randomly (in a pool of at l
 Wikipedia Page
 
 Example 01
-`
-
+``
 $>curl -i http://127.0.0.1:8000
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
@@ -24,8 +23,7 @@ Content-Length: 19
 
 New York, New York
 $>
-
-`
+``
 
 Example 02
 

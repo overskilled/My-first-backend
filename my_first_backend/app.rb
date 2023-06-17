@@ -13,10 +13,18 @@ helpers do
       @auth ||=  Rack::Auth::Basic::Request.new(request.env)
       @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['admin', 'admin']
     end
-  end
+end
 
 get '/' do
-  ['My Way','My Sweet Lady','The Nearness of You','An Old Fashioned Christmas','Old School Teacher'].sample()
+    data_array = []
+
+    File.open("songs.txt", 'r') do |file|
+        file.each_line do |line|
+          data_array << line.chomp
+        end
+    end
+
+    data_array.sample()
   
 end
 get '/birth_date'do
@@ -26,8 +34,7 @@ get '/birth_city'do
     'Hoboken, New Jersey'
 end
 get '/Wives'do
-    ['Nancy Barbato','Ava Gardner','Mia Farrow','Barbara Sinatra']
-    
+    ['Nancy Barbato','Ava Gardner','Mia Farrow','Barbara Sinatra'].join(",")
 end
 get '/picture'do
     redirect 'https://upload.wikimedia.org/wikipedia/commons/a/af/Frank_Sinatra_%2757.jpg'

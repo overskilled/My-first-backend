@@ -13,7 +13,7 @@ Wikipedia Page
 
 Example 01
 `
-$>curl -i http://web-XXXXXXXXX.docode.YYYY.qwasar.io
+$>curl -i http://127.0.0.1:8000
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -28,7 +28,7 @@ $>
 Example 02
 
 `
-$>curl http://web-XXXXXXXXX.docode.YYYY.qwasar.io
+$>curl http://127.0.0.1:8000
 My Way
 $>
 `
@@ -52,11 +52,12 @@ wife1, wife2, wife3, wife4
 
     GET on /picture. This action will redirect to Frank Sinatra's picture.
 
-(https://en.wikipedia.org/wiki/Frank_Sinatra#/media/File:Frank_Sinatra2,_Pal_Joey.jpg)
+    (https://en.wikipedia.org/wiki/Frank_Sinatra#/media/File:Frank_Sinatra2,_Pal_Joey.jpg)
 
-Example00
+Example01
 
-$>curl -i http://web-XXXXXXXXX.docode.YYYY.qwasar.io
+`
+$>curl -i http://127.0.0.1:8000
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -66,12 +67,15 @@ Content-Length: 19
 
 New York, New York
 $>
+`
 
-Example01
+Example02
 
-$>curl http://web-XXXXXXXXX.docode.YYYY.qwasar.io
+`
+$>curl http://127.0.0.1:8000
 My Way
 $>
+`
 
 ## Part III
 
@@ -81,9 +85,10 @@ Continue to build your backend app.js, in this last part we will add two more ro
 
     GET on /protected. This action will be protected by a HTTP Basic access authentication and print "Welcome, authenticated client" if you are authorized with the login admin and password admin otherwise it will provide a 401 Not authorized.
 
-Example00
+Example01
 
-$>curl -i http://web-XXXXXXXXX.docode.YYYY.qwasar.io/protected
+`
+$>curl -i http://127.0.0.1:8000/protected
 HTTP/1.1 401 Unauthorized
 Content-Type: text/html;charset=utf-8
 WWW-Authenticate: Basic realm="Restricted Area"
@@ -94,10 +99,12 @@ Content-Length: 15
 
 Not authorized
 $>
+`
 
-Example01
+Example02
 
-$>curl -i http://admin:admin@web-XXXXXXXXX.docode.YYYY.qwasar.io/protected
+`
+$>curl -i http://admin:admin@127.0.0.1:8000/protected
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -107,10 +114,12 @@ Content-Length: 29
 
 Welcome, authenticated client
 $>
+`
 
 Example02
 
-$>curl -i http://web-XXXXXXXXX.docode.YYYY.qwasar.io/public
+`
+$>curl -i http://127.0.0.1:8000/public
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -120,3 +129,4 @@ Content-Length: 27
 
 Everybody can see this page
 $>
+`

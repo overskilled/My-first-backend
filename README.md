@@ -12,7 +12,8 @@ It will have a route GET on /. This action will give randomly (in a pool of at l
 Wikipedia Page
 
 Example 01
-```$>curl -i http://127.0.0.1:8000
+```
+$>curl -i http://127.0.0.1:8000
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -26,7 +27,8 @@ $>
 
 Example 02
 
-```$>curl http://127.0.0.1:8000
+```
+$>curl http://127.0.0.1:8000
 My Way
 $>
 ```
@@ -54,7 +56,8 @@ wife1, wife2, wife3, wife4
 
 Example01
 
-```$>curl -i http://127.0.0.1:8000
+```
+$>curl -i http://127.0.0.1:8000
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -68,7 +71,8 @@ $>
 
 Example02
 
-```$>curl http://127.0.0.1:8000
+```
+$>curl http://127.0.0.1:8000
 My Way
 $>
 ```
@@ -83,7 +87,8 @@ Continue to build your backend app.js, in this last part we will add two more ro
 
 Example01
 
-```$>curl -i http://127.0.0.1:8000/protected
+```
+$>curl -i http://127.0.0.1:8000/protected
 HTTP/1.1 401 Unauthorized
 Content-Type: text/html;charset=utf-8
 WWW-Authenticate: Basic realm="Restricted Area"
@@ -98,7 +103,8 @@ $>
 
 Example02
 
-```$>curl -i http://admin:admin@127.0.0.1:8000/protected
+```
+$>curl -i http://admin:admin@127.0.0.1:8000/protected
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -112,7 +118,8 @@ $>
 
 Example02
 
-```$>curl -i http://127.0.0.1:8000/public
+```
+$>curl -i http://127.0.0.1:8000/public
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block

@@ -26,11 +26,10 @@ $>
 
 Example 02
 
-`
-$>curl http://127.0.0.1:8000
+```$>curl http://127.0.0.1:8000
 My Way
 $>
-`
+```
 
 ## Part II
 
@@ -55,8 +54,7 @@ wife1, wife2, wife3, wife4
 
 Example01
 
-`
-$>curl -i http://127.0.0.1:8000
+```$>curl -i http://127.0.0.1:8000
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -66,15 +64,14 @@ Content-Length: 19
 
 New York, New York
 $>
-`
+```
 
 Example02
 
-`
-$>curl http://127.0.0.1:8000
+```$>curl http://127.0.0.1:8000
 My Way
 $>
-`
+```
 
 ## Part III
 
@@ -86,8 +83,7 @@ Continue to build your backend app.js, in this last part we will add two more ro
 
 Example01
 
-`
-$>curl -i http://127.0.0.1:8000/protected
+```$>curl -i http://127.0.0.1:8000/protected
 HTTP/1.1 401 Unauthorized
 Content-Type: text/html;charset=utf-8
 WWW-Authenticate: Basic realm="Restricted Area"
@@ -98,12 +94,11 @@ Content-Length: 15
 
 Not authorized
 $>
-`
+```
 
 Example02
 
-`
-$>curl -i http://admin:admin@127.0.0.1:8000/protected
+```$>curl -i http://admin:admin@127.0.0.1:8000/protected
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -113,12 +108,11 @@ Content-Length: 29
 
 Welcome, authenticated client
 $>
-`
+```
 
 Example02
 
-`
-$>curl -i http://127.0.0.1:8000/public
+```$>curl -i http://127.0.0.1:8000/public
 HTTP/1.1 200 OK
 Content-Type: text/html;charset=utf-8
 X-XSS-Protection: 1; mode=block
@@ -128,4 +122,4 @@ Content-Length: 27
 
 Everybody can see this page
 $>
-`
+```
